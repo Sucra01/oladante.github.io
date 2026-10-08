@@ -1,0 +1,19 @@
+ACCESS HOSPITAL PHP/MYSQL BACKEND
+
+1. Put this project in C:\xampp\htdocs\access-hospital\
+2. Start Apache and MySQL in XAMPP.
+3. Open phpMyAdmin: http://localhost/phpmyadmin
+4. Import database.sql. It creates the access_hospital database and tables.
+5. Check config/config.php if your MySQL username/password differs from XAMPP defaults.
+6. Admin portal: http://localhost/access-hospital/admin/login.php
+7. Default admin email: admin@accesshospital.com
+8. The password seeded in database.sql is: password
+   IMPORTANT: change this immediately before production.
+9. Appointment API: POST JSON to api/appointments.php
+10. Contact API: POST JSON to api/contact.php
+
+Security notes:
+- Uses PDO prepared statements.
+- Passwords are stored as password hashes.
+- No raw card/payment details are stored.
+- Before production, enable HTTPS, change DB credentials, replace the seeded admin password, add CSRF protection to admin forms, and use role-based accounts rather than one shared administrator.
